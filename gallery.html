@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - Kayagi Art</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <!-- Logo goes here -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+      <!-- Sparkles -->
+      <polygon points="20,20 25,45 10,35 30,35 15,45" fill="white" opacity="0.9"/>
+      <polygon points="60,40 65,65 50,55 70,55 55,65" fill="white" opacity="0.9"/>
+      <polygon points="100,25 105,50 90,40 110,40 95,50" fill="white" opacity="0.9"/>
+      <!-- Text -->
+      <text x="140" y="80" font-family="Arial, sans-serif" font-size="40" fill="white">Miriam Violah</text>
+    </svg>
+    <style>
+        /* Navbar CSS */
+        #navbar {
+            display: flex;             /* Arrange links in a row */
+            justify-content: flex-end; /* Align links to the right */
+            gap: 30px;                 /* Space between each link */
+            padding: 20px 50px;        /* Optional padding */
+            background-color: #f8f8f8; /* Optional background */
+        }
+
+        #navbar a {
+            text-decoration: none;     
+            color: #333;               
+            font-weight: bold;         
+            font-size: 18px;           
+            transition: color 0.3s;    
+        }
+
+        #navbar a:hover {
+            color: #6C5CE7;            
+        }
+    </style>
+
+
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+}
+
+/* Gallery CSS */
+.container {
+  padding: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* 3 per row */
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery a {
+  display: block;
+  width: 300px;
+  height: 200px;        /* rectangular */
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* entire image visible */
+  object-position: center;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery a {
+    width: 80%;
+    height: auto;
+  }
+
+  .gallery img {
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;"></header>>
+    
+<nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+   
+</head>
+<body>
+    <h1>Gallery</h1>
+<div class="container">
+  <section class="gallery">
+    <a href="https://miriamviolah.gumroad.com/l/product2" target="_blank">
+      <img src="images\NATURE GIRL IMAGE  (7).jpeg" alt="Water Girl">
+    </a>
+    <a href="https://miriamviolah.gumroad.com/l/product3" target="_blank">
+      <img src="images\NATURE GIRL IMAGE  (1).png" alt="Nature Girl">
+    </a>
+    <a href="https://miriamviolah.gumroad.com/l/tivign?_gl=1*6v6x5e*_ga*MTExNjY1MDA5MC4xNzYyNzY5NDUw*_ga_6LJN6D94N6*czE3NjMyODkzMTIkbzIwJGcxJHQxNzYzMjkwNDkyJGo1OSRsMCRoMA.." target="_blank">
+      <img src="images\OFFICE LADY 1.jpg" alt="Office Lady 1">
+    </a>
+     <a href="https://miriamviolah.gumroad.com/l/product4" target="_blank">
+      <img src="images\i want a video of a girl made of water entirely water no human skin, she will have dull big marble eyes, intensively thick eye lashes made of water colour black , a small button nose, small heart shaped lips too o.jpg" alt="Water Girl">
+    </a>
+     <a href="https://miriamviolah.gumroad.com/l/tivign?_gl=1*6v6x5e*_ga*MTExNjY1MDA5MC4xNzYyNzY5NDUw*_ga_6LJN6D94N6*czE3NjMyODkzMTIkbzIwJGcxJHQxNzYzMjkwNDkyJGo1OSRsMCRoMA.." target="_blank">
+      <img src="images\OFFICE LADY 2 .jpeg" alt="Office Lady 2">
+    </a>
+     <a href="https://miriamviolah.gumroad.com/l/tivign?_gl=1*6v6x5e*_ga*MTExNjY1MDA5MC4xNzYyNzY5NDUw*_ga_6LJN6D94N6*czE3NjMyODkzMTIkbzIwJGcxJHQxNzYzMjkwNDkyJGo1OSRsMCRoMA.." target="_blank">
+      <img src="images\OFFICE LADY 3 .jpg" alt="Office Lady 3">
+    </a>
+     <a href="https://miriamviolah.gumroad.com/l/tivign?_gl=1*6v6x5e*_ga*MTExNjY1MDA5MC4xNzYyNzY5NDUw*_ga_6LJN6D94N6*czE3NjMyODkzMTIkbzIwJGcxJHQxNzYzMjkwNDkyJGo1OSRsMCRoMA.." target="_blank">
+      <img src="images\OFFICE LADY 4.jpeg" alt="Office Lady 4">
+    </a>
+  </section>
+</div>
+
+<footer class="footer-socials">
+    <!-- Social Links -->
+<div style="display:flex; justify-content:center; gap:20px; align-items:center; margin-top:20px;">
+
+  <!-- Gmail -->
+  <a href="mailto:YOUR_EMAIL_HERE" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" width="32" alt="Gmail">
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width="32" alt="Instagram">
+  </a>
+
+  <!-- Pinterest -->
+  <a href="https://pinterest.com/miriamviolah" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" width="32" alt="Pinterest">
+  </a>
+
+  <!-- Gumroad (official working icon) -->
+  <a href="https://miriamviolah.gumroad.com" target="_blank">
+    <img src="https://gumroad.com/favicon.ico" width="32" alt="Gumroad">
+  </a>
+
+</div>
+</footer>
+
+</body>
+</html>

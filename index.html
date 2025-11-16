@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miriam Violah Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Video background */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 50px;
+    position: relative;
+    z-index: 2;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#navbar a:hover {
+    color: #6C5CE7;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Overlay content */
+.overlay {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.overlay h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: #6C5CE7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #4e3dcf;
+}
+
+/* Social icons */
+.socials {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.socials a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #6C5CE7;
+}
+</style>
+  <style>
+    /* Existing CSS for overlay, navbar, etc. */
+
+    /* Hover outline for your h1 */
+    .overlay h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* optional shadow */
+        transition: all 0.3s ease;
+    }
+
+    .overlay h1:hover {
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+        text-stroke: 2px white;
+    }
+  </style>
+  <style>
+    .overlay {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+
+    /* Adjusted blur effect */
+    background: rgba(0, 0, 0, 0.2); /* slightly lighter overlay */
+    backdrop-filter: blur(3px);      /* reduced from 8px to 3px */
+    -webkit-backdrop-filter: blur(3px); /* Safari support */
+    border-radius: 10px;             /* optional */
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Video Background -->
+<video autoplay loop muted playsinline class="bg-video">
+    <source src="videos/video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<!-- Navbar -->
+<nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <!-- Sparkles -->
+  <polygon points="20,20 25,45 10,35 30,35 15,45" fill="white" opacity="0.9"/>
+  <polygon points="60,40 65,65 50,55 70,55 55,65" fill="white" opacity="0.9"/>
+  <polygon points="100,25 105,50 90,40 110,40 95,50" fill="white" opacity="0.9"/>
+  
+  <!-- Text -->
+  <text x="140" y="80" font-family="Arial, sans-serif" font-size="40" fill="white">Miriam Violah</text>
+</svg>
+
+
+
+<!-- Overlay Content -->
+<section class="overlay">
+    <h1>Creative Digital Artist</h1>
+    <h2>AI Art • Concept Design • Visual Creativity</h2>
+    <p>Enter my world of digital magic, creativity, and imagination.</p>
+    <a href="#gallery" class="btn">View My Gallery</a>
+
+    <!-- Social Icons -->
+<div class="socials">
+    <a href="mailto:miriamviolah@gmail.com" target="_blank">
+        <img src="https://img.icons8.com/fluency/48/gmail.png" alt="Gmail Icon">
+    </a>
+
+    <a href="https://instagram.com/caiurgeghee" target="_blank">
+        <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram">
+    </a>
+
+    <a href="https://pinterest.com/miriamviolah" target="_blank">
+        <img src="https://img.icons8.com/color/48/pinterest.png" alt="Pinterest">
+    </a>
+
+    <a href="https://miriamviolah.gumroad.com" target="_blank">
+        <img src="https://img.icons8.com/color/48/shop.png" alt="Store Icon">
+    </a>
+</div>
+
+</section>
+
+</body>
+</html>
