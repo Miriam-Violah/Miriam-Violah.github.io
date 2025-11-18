@@ -17,14 +17,14 @@
             font-family: Arial, sans-serif;
         }
 
-        /* HEADER CSS */
+        /* HEADER */
         header {
             display: flex;
-            justify-content: space-between; /* Title left, links right */
+            justify-content: space-between; /* Title left, navbar right */
             align-items: center;
             padding: 20px 40px;
             background-color: #f8f8f8;
-            flex-wrap: wrap; /* prevents wrapping on small screens */
+            flex-wrap: wrap;
         }
 
         header h1 {
@@ -47,36 +47,56 @@
         #navbar a:hover {
             color: #6C5CE7;
         }
-   .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns desktop */
-    gap: 20px;
-    justify-content: center;
-}
 
-@media (max-width: 900px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+        /* GALLERY SECTION */
+        .gallery-container {
+            padding: 40px 20px;
+            background-color: #cce7ff; /* Light blue background applied here */
+        }
 
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-}
+        .gallery-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: transform 0.3s;
-}
-         .gallery-container {
-    padding: 40px 20px;  /* top/bottom 40px, left/right 20px */
-    background-color: #cce7ff;
-}   
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery a {
+            display: block;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .gallery img {
+            width: 100%;    /* Fill container width */
+            height: auto;   /* Keep original aspect ratio */
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -97,58 +117,34 @@
     <h2>Gallery</h2>
     <div class="gallery">
         <a href="https://miriamviolah.gumroad.com/l/product2" target="_blank">
-            <img src="NATURE GIRL IMAGE  (7).jpeg" alt="Water Girl">
+            <img src="images/NATURE-GIRL-7.jpeg" alt="Water Girl">
         </a>
         <a href="https://miriamviolah.gumroad.com/l/product3" target="_blank">
-            <img src="NATURE GIRL IMAGE  (1).png" alt="Nature Girl">
+            <img src="images/NATURE-GIRL-1.png" alt="Nature Girl">
         </a>
-        <a href="https://miriamviolah.gumroad.com/l/tivign?_gl=1*6v6x5e*_ga*MTExNjY1MDA5MC4xNzYyNzY5NDUw*_ga_6LJN6D94N6*czE3NjMyODkzMTIkbzIwJGcxJHQxNzYzMjkwNDkyJGo1OSRsMCRoMA.." target="_blank">
-            <img src="OFFICE LADY 1.jpg" alt="Office Lady 1">
+        <a href="https://miriamviolah.gumroad.com/l/tivign" target="_blank">
+            <img src="images/OFFICE-LADY-1.jpg" alt="Office Lady 1">
         </a>
         <a href="https://miriamviolah.gumroad.com/l/product4" target="_blank">
-            <img src="IWANTA~1.JPG" alt="Water Girl">
+            <img src="images/IWANTA-1.JPG" alt="Water Girl">
         </a>
-        <a href="https://miriamviolah.gumroad.com/l/tivign?_gl=1*6v6x5e*_ga*MTExNjY1MDA5MC4xNzYyNzY5NDUw*_ga_6LJN6D94N6*czE3NjMyODkzMTIkbzIwJGcxJHQxNzYzMjkwNDkyJGo1OSRsMCRoMA.." target="_blank">
-            <img src="OFFICE LADY 2 .jpeg" alt="Office Lady 2">
+        <a href="https://miriamviolah.gumroad.com/l/tivign" target="_blank">
+            <img src="images/OFFICE-LADY-2.jpeg" alt="Office Lady 2">
         </a>
-        <a href="https://miriamviolah.gumroad.com/l/tivign?_gl=1*6v6x5e*_ga*MTExNjY1MDA5MC4xNzYyNzY5NDUw*_ga_6LJN6D94N6*czE3NjMyODkzMTIkbzIwJGcxJHQxNzYzMjkwNDkyJGo1OSRsMCRoMA.." target="_blank">
-            <img src="OFFICE LADY 3 .jpg" alt="Office Lady 3">
+        <a href="https://miriamviolah.gumroad.com/l/tivign" target="_blank">
+            <img src="images/OFFICE-LADY-3.jpg" alt="Office Lady 3">
         </a>
-        <a href="https://miriamviolah.gumroad.com/l/tivign?_gl=1*6v6x5e*_ga*MTExNjY1MDA5MC4xNzYyNzY5NDUw*_ga_6LJN6D94N6*czE3NjMyODkzMTIkbzIwJGcxJHQxNzYzMjkwNDkyJGo1OSRsMCRoMA.." target="_blank">
-            <img src="OFFICE LADY 4.jpeg" alt="Office Lady 4">
+        <a href="https://miriamviolah.gumroad.com/l/tivign" target="_blank">
+            <img src="images/OFFICE-LADY-4.jpeg" alt="Office Lady 4">
         </a>
     </div>
 </section>
-<footer class="footer-socials">
-    <!-- Social Links -->
-<div style="display:flex; justify-content:center; gap:20px; align-items:center; margin-top:20px;">
-
-  <!-- Gmail -->
-  <a href="mailto:YOUR_EMAIL_HERE" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" width="32" alt="Gmail">
-  </a>
-
-  <!-- Instagram -->
-  <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width="32" alt="Instagram">
-  </a>
-
-  <!-- Pinterest -->
-  <a href="https://pinterest.com/miriamviolah" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" width="32" alt="Pinterest">
-  </a>
-
-  <!-- Gumroad (official working icon) -->
-  <a href="https://miriamviolah.gumroad.com" target="_blank">
-    <img src="https://gumroad.com/favicon.ico" width="32" alt="Gumroad">
-  </a>
-
-</div>
 </footer>
 
 </body>
 
 </html>
+
 
 
 
