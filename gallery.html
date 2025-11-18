@@ -7,118 +7,61 @@
 
     <style>
         /* Navbar CSS */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Title left, links right */
+            padding: 20px 40px;
+            background-color: #f8f8f8;
+        }
+
         #navbar {
-            display: flex;             /* Arrange links in a row */
-            justify-content: flex-end; /* Align links to the right */
-            gap: 30px;                 /* Space between each link */
-            padding: 20px 50px;        /* Optional padding */
-            background-color: #f8f8f8; /* Optional background */
+            display: flex;
+            gap: 30px;
         }
 
         #navbar a {
-            text-decoration: none;     
-            color: #333;               
-            font-weight: bold;         
-            font-size: 18px;           
-            transition: color 0.3s;    
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
         }
 
         #navbar a:hover {
-            color: #6C5CE7;            
+            color: #6C5CE7;
         }
     </style>
 
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+        body, html {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
 
-body, html {
-  font-family: Arial, sans-serif;
-}
-
-/* Gallery CSS */
-.container {
-  padding: 20px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 300px); /* 3 per row */
-  gap: 20px;
-  justify-content: center;
-}
-
-.gallery a {
-  display: block;
-  width: 300px;
-  height: 200px;        /* rectangular */
-  overflow: hidden;
-  border-radius: 15px;
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;   /* entire image visible */
-  object-position: center;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .gallery {
-    grid-template-columns: repeat(2, 300px);
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery a {
-    width: 80%;
-    height: auto;
-  }
-
-  .gallery img {
-    height: auto;
-  }
-}
-</style>
 <body>
 
-<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;"></header>>
-            <!-- Logo goes here -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
-      <!-- Sparkles -->
-      <polygon points="20,20 25,45 10,35 30,35 15,45" fill="white" opacity="0.9"/>
-      <polygon points="60,40 65,65 50,55 70,55 55,65" fill="white" opacity="0.9"/>
-      <polygon points="100,25 105,50 90,40 110,40 95,50" fill="white" opacity="0.9"/>
-      <!-- Text -->
-      <text x="140" y="80" font-family="Arial, sans-serif" font-size="40" fill="white">Miriam Violah</text>
-    </svg>
-</head> 
-<nav id="navbar">
+<!-- HEADER START -->
+<header>
+    <h1>Gallery</h1>
+
+    <nav id="navbar">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
-   
-</head>
+<!-- HEADER END -->
+
    <section class="gallery">   
     <h1>Gallery</h1>
 <div class="container">
@@ -176,6 +119,7 @@ body, html {
 </body>
 
 </html>
+
 
 
 
