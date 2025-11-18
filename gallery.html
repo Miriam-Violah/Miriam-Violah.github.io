@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        /* Reset */
+        /* RESET */
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +23,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 40px;
-            background-color: #f8f8f8;
+            background-color: #1e3a8a; /* dark blue header */
             flex-wrap: wrap;
         }
 
@@ -38,14 +38,14 @@
 
         #navbar a {
             text-decoration: none;
-            color: #333;
+            color: #f8f8f8; /* light links on dark background */
             font-weight: bold;
             font-size: 18px;
             transition: color 0.3s;
         }
 
         #navbar a:hover {
-            color: #6C5CE7;
+            color: #6C5CE7; /* hover effect */
         }
 
         /* SVG logo inside header */
@@ -53,10 +53,14 @@
             height: 80px;
         }
 
+        .logo-svg text {
+            fill: white; /* ensures logo text is visible */
+        }
+
         /* GALLERY SECTION */
         .gallery-container {
             padding: 40px 20px;
-            background-color: #cce7ff; /* Light blue background */
+            background-color: #cce7ff; /* light blue gallery background */
         }
 
         .gallery-container h2 {
@@ -80,7 +84,7 @@
 
         .gallery img {
             width: 100%;
-            height: auto;
+            height: auto; /* keeps natural aspect ratio */
             object-fit: cover;
             transition: transform 0.3s;
             display: block;
@@ -107,7 +111,6 @@
         .footer-socials {
             margin-top: 40px;
         }
-
     </style>
 </head>
 
