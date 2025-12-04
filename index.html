@@ -1,144 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miriam Violah Art – Home</title>
-    <style>
-        body {
-            margin: 0;
-            background-color: black;
-            font-family: Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miriam Violah Art – Home</title>
 
-        /* NAVBAR */
-        nav {
-            background-color: rgba(0,0,0,0.7);
-            backdrop-filter: blur(4px);
-            padding: 15px 50px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 12px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    /* NAVBAR */
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 15px 50px;
+        position: sticky;
+        top: 0;
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(4px);
+        z-index: 1000;
+    }
 
-        nav a:hover {
-            color: #6C5CE7;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 5px;
-        }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 8px 12px;
+        transition: 0.3s;
+    }
 
-        nav a.active {
-            color: #6C5CE7;
-            border-bottom: 2px solid #6C5CE7;
-            padding-bottom: 3px;
-        }
+    nav a:hover {
+        color: #6C5CE7;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 5px;
+    }
 
-        /* Main section */
-        .hero {
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
+    nav a.active {
+        color: #6C5CE7;
+        border-bottom: 2px solid #6C5CE7;
+        padding-bottom: 3px;
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
+    /* HERO SECTION */
+    .hero {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
 
-        .hero h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
 
-        .btn {
-            padding: 12px 30px;
-            background: #6C5CE7;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            transition: 0.3s;
-        }
+    .hero h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
 
-        .btn:hover {
-            background: #4e3dcf;
-        }
+    .btn {
+        padding: 12px 30px;
+        background: #6C5CE7;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
 
-        /* Social icons */
-        .socials {
-            margin-top: 30px;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
+    .btn:hover {
+        background: #4e3dcf;
+    }
 
-        .socials a img {
-            width: 40px;
-            height: 40px;
-            transition: 0.3s;
-        }
+    /* SOCIAL ICONS */
+    .socials {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
 
-        .socials a img:hover {
-            transform: scale(1.2);
-        }
-    </style>
+    .socials a img {
+        width: 40px;
+        height: 40px;
+        transition: 0.3s;
+    }
+
+    .socials a img:hover {
+        transform: scale(1.2);
+    }
+</style>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="https://miriamviolahart.blogspot.com" target="_blank">Blog</a>
-    </nav>
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="https://miriamviolahart.blogspot.com" target="_blank">Blog</a>
+</nav>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Creative Digital Artist</h1>
-        <h2>AI Art • Concept Design • Visual Creativity</h2>
-        <a href="#gallery" class="btn">View My Gallery</a>
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Creative Digital Artist</h1>
+    <h2>AI Art • Concept Design • Visual Creativity</h2>
+    <a href="#gallery" class="btn">View My Gallery</a>
 
-        <div class="socials">
-            <a href="https://instagram.com/caiurgeghee" target="_blank">
-                <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram">
-            </a>
-            <a href="https://pinterest.com/miriamviolah" target="_blank">
-                <img src="https://img.icons8.com/color/48/pinterest.png" alt="Pinterest">
-            </a>
-            <a href="https://miriamviolah.gumroad.com" target="_blank">
-                <img src="https://img.icons8.com/color/48/shop.png" alt="Store Icon">
-            </a>
-        </div>
-    </section>
+    <div class="socials">
+        <a href="https://instagram.com/caiurgeghee" target="_blank">
+            <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="https://pinterest.com/miriamviolah" target="_blank">
+            <img src="https://img.icons8.com/color/48/pinterest.png" alt="Pinterest">
+        </a>
+        <a href="https://miriamviolah.gumroad.com" target="_blank">
+            <img src="https://img.icons8.com/color/48/shop.png" alt="Store Icon">
+        </a>
+    </div>
+</section>
 
-    <script>
-        // Highlight active link dynamically
-        const links = document.querySelectorAll('.nav-link');
-        links.forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
-            }
-        });
-    </script>
+<script>
+    // Highlight active link dynamically
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        }
+    });
+</script>
 
 </body>
 </html>
+
