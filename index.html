@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miriam Violah Art – Home</title>
-
     <style>
         body {
             margin: 0;
@@ -14,107 +13,132 @@
 
         /* NAVBAR */
         nav {
-            background-color: #b30000; /* RED */
-            padding: 15px;
+            background-color: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            padding: 15px 50px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 18px;
             padding: 8px 12px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            background-color: #ff4d4d;
+            color: #6C5CE7;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
         }
 
         nav a.active {
-            background-color: white;
-            color: #b30000;
-            font-weight: bold;
+            color: #6C5CE7;
+            border-bottom: 2px solid #6C5CE7;
+            padding-bottom: 3px;
         }
 
-        h1 {
+        /* Main section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             color: white;
         }
 
-        #blogPosts a {
-            display: block;
-            padding: 8px;
-            background: #222;
-            color: white;
-            margin-bottom: 6px;
-            border-radius: 6px;
-            text-decoration: none;
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
         }
 
-        #blogPosts a:hover {
-            background: #444;
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background: #6C5CE7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #4e3dcf;
+        }
+
+        /* Social icons */
+        .socials {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .socials a img {
+            width: 40px;
+            height: 40px;
+            transition: 0.3s;
+        }
+
+        .socials a img:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
-
 <body>
 
     <!-- NAVBAR -->
     <nav>
-        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="blog.html">Blog</a>
-
+        <a href="https://miriamviolahart.blogspot.com" target="_blank">Blog</a>
     </nav>
 
-    <h1>Recent Blog Posts</h1>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Creative Digital Artist</h1>
+        <h2>AI Art • Concept Design • Visual Creativity</h2>
+        <a href="#gallery" class="btn">View My Gallery</a>
 
-    <section id="blogPosts">
-        <p style="color:white;">Loading posts…</p>
+        <div class="socials">
+            <a href="https://instagram.com/caiurgeghee" target="_blank">
+                <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram">
+            </a>
+            <a href="https://pinterest.com/miriamviolah" target="_blank">
+                <img src="https://img.icons8.com/color/48/pinterest.png" alt="Pinterest">
+            </a>
+            <a href="https://miriamviolah.gumroad.com" target="_blank">
+                <img src="https://img.icons8.com/color/48/shop.png" alt="Store Icon">
+            </a>
+        </div>
     </section>
 
-    <!-- ✅ FIXED SCRIPT (now at the bottom) -->
     <script>
-        /* ---------- Highlight active page ---------- */
+        // Highlight active link dynamically
         const links = document.querySelectorAll('.nav-link');
         links.forEach(link => {
             if (link.href === window.location.href) {
                 link.classList.add('active');
             }
         });
-
-        /* ---------- Auto-load blog posts ---------- */
-        const feedUrl = "https://miriamviolahart.blogspot.com/feeds/posts/default?alt=json";
-        const blogContainer = document.getElementById("blogPosts");
-
-        fetch(feedUrl)
-            .then(response => response.json())
-            .then(data => {
-                const entries = data.feed.entry || [];
-                blogContainer.innerHTML = "";
-
-                entries.slice(0, 6).forEach(post => {
-                    const title = post.title.$t;
-                    const link = post.link.find(l => l.rel === "alternate").href;
-
-                    const a = document.createElement("a");
-                    a.href = link;
-                    a.target = "_blank";
-                    a.textContent = title;
-
-                    blogContainer.appendChild(a);
-                });
-            })
-            .catch(() => {
-                blogContainer.innerHTML =
-                    "<p style='color:white;'>Could not load posts.</p>";
-            });
     </script>
 
 </body>
 </html>
-
