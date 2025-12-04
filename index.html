@@ -53,6 +53,52 @@ body, html {
 #navbar a:hover {
     color: #6C5CE7;
 }
+    /* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hidden content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    min-width: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.25s;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Hover animation */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ACTIVE PAGE HIGHLIGHT */
+.nav-link.active {
+    color: #6C5CE7;
+    border-bottom: 2px solid #6C5CE7;
+    padding-bottom: 3px;
+}
 
 /* Logo */
 .logo {
@@ -177,6 +223,41 @@ body, html {
 
   gtag('config', 'G-9JDZRFTXSF');
 </script>
+    <script>
+// --- Highlight active page ---
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
+
+// --- Auto-load Blogger posts ---
+const feedUrl = "https://miriamviolahart.blogspot.com/feeds/posts/default?alt=json";
+const blogContainer = document.getElementById("blogPosts");
+
+fetch(feedUrl)
+    .then(response => response.json())
+    .then(data => {
+        const entries = data.feed.entry || [];
+        blogContainer.innerHTML = "";
+
+        entries.slice(0, 6).forEach(post => {
+            const title = post.title.$t;
+            const link = post.link.find(l => l.rel === "alternate").href;
+
+            const a = document.createElement("a");
+            a.href = link;
+            a.target = "_blank";
+            a.textContent = title;
+
+            blogContainer.appendChild(a);
+        });
+    })
+    .catch(err => {
+        blogContainer.innerHTML = "<p style='color:white;padding:10px;'>Could not load posts</p>";
+    });
+</script>
 <body>
 
 <!-- Video Background -->
@@ -192,8 +273,13 @@ body, html {
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
     <a href="miriamviolahart.blogspot.com">Blog</a>
-
-
+    <!-- BLOG DROPDOWN -->
+    <div class="dropdown">
+        <a href="https://miriamviolahart.blogspot.com" class="nav-link">Blog ▼</a>
+        <div class="dropdown-content" id="blogPosts">
+            <p style="padding:10px; color:white;">Loading...</p>
+        </div>
+    </div>
 </nav>
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
   <!-- Sparkles -->
@@ -232,6 +318,7 @@ body, html {
 
 </body>
 </html>
+
 
 
 
