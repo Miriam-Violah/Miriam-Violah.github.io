@@ -3,59 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog - Miriam Violah Art</title>
+<title>Miriam Violah Art – Home</title>
+
 <style>
-    body { margin:0; font-family:Arial,sans-serif; background:#111; color:white; }
-    nav { display:flex; justify-content:center; gap:25px; padding:15px 50px; position:sticky; top:0; background:rgba(0,0,0,0.7); backdrop-filter:blur(4px); z-index:1000; }
-    nav a { color:white; text-decoration:none; font-size:18px; font-weight:bold; padding:8px 12px; transition:0.3s; }
-    nav a:hover { color:#6C5CE7; background:rgba(255,255,255,0.1); border-radius:5px; }
-    nav a.active { color:#6C5CE7; border-bottom:2px solid #6C5CE7; padding-bottom:3px; }
-    .blog-container { max-width:800px; margin:40px auto; padding:20px; }
-    .post { background:rgba(255,255,255,0.08); border-radius:10px; padding:20px; margin-bottom:20px; transition: transform 0.3s; }
-    .post:hover { transform:translateY(-5px); }
-    .post h2 { margin:0; font-size:26px; }
-    .post a { color:#6C5CE7; text-decoration:none; }
-    .loading { text-align:center; margin-top:40px; font-size:18px; }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+    }
+
+    /* NAVBAR */
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 15px 50px;
+        position: sticky;
+        top: 0;
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(4px);
+        z-index: 1000;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 8px 12px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #6C5CE7;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 5px;
+    }
+
+    nav a.active {
+        color: #6C5CE7;
+        border-bottom: 2px solid #6C5CE7;
+        padding-bottom: 3px;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(0,0,0,0.85);
+        min-width: 250px;
+        border-radius: 8px;
+        overflow: hidden;
+        backdrop-filter: blur(4px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+        transition: background 0.25s;
+    }
+
+    .dropdown-content a:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        background: #6C5CE7;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #4e3dcf;
+    }
+
+    /* SOCIAL ICONS */
+    .socials {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .socials a img {
+        width: 40px;
+        height: 40px;
+        transition: 0.3s;
+    }
+
+    .socials a img:hover {
+        transform: scale(1.2);
+    }
 </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <a class="active" href="blog.html">Blog</a>
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="gallery.html" class="nav-link">Gallery</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+
+    <!-- Blog Dropdown -->
+    <div class="dropdown">
+        <a href="https://miriamviolahart.blogspot.com" class="nav-link" target="_blank">Blog ▼</a>
+        <div class="dropdown-content" id="blogDropdown">
+            <p style="padding:10px; color:white;">Loading posts…</p>
+        </div>
+    </div>
 </nav>
 
-<div class="blog-container">
-    <h1>Latest Posts</h1>
-    <p class="loading">Loading posts...</p>
-</div>
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Creative Digital Artist</h1>
+    <h2>AI Art • Concept Design • Visual Creativity</h2>
+    <a href="#gallery" class="btn">View My Gallery</a>
+
+    <div class="socials">
+        <a href="https://instagram.com/caiurgeghee" target="_blank">
+            <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="https://pinterest.com/miriamviolah" target="_blank">
+            <img src="https://img.icons8.com/color/48/pinterest.png" alt="Pinterest">
+        </a>
+        <a href="https://miriamviolah.gumroad.com" target="_blank">
+            <img src="https://img.icons8.com/color/48/shop.png" alt="Store Icon">
+        </a>
+    </div>
+</section>
 
 <script>
-// Fetch posts from RSS2JSON
+// Highlight active page dynamically
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
+
+// Fetch latest 5 posts for dropdown using RSS2JSON
 const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://miriamviolahart.blogspot.com/feeds/posts/default?alt=json";
-const container = document.querySelector(".blog-container");
+const dropdown = document.getElementById("blogDropdown");
 
 fetch(feedUrl)
 .then(res => res.json())
 .then(data => {
-    document.querySelector(".loading").remove();
-    data.items.slice(0,5).forEach(post => { // latest 5 posts
-        const div = document.createElement("div");
-        div.className = "post";
-        div.innerHTML = `
-            <h2><a href="${post.link}" target="_blank">${post.title}</a></h2>
-            <p>${post.description.replace(/<[^>]*>/g,"").slice(0,200)}...</p>
-        `;
-        container.appendChild(div);
+    dropdown.innerHTML = "";
+    data.items.slice(0,5).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.link;
+        a.target = "_blank";
+        a.textContent = post.title;
+        dropdown.appendChild(a);
     });
 })
 .catch(() => {
-    container.innerHTML = "<p class='loading'>Could not load posts.</p>";
+    dropdown.innerHTML = "<p style='padding:10px; color:white;'>Could not load posts.</p>";
 });
 </script>
 
 </body>
 </html>
+
